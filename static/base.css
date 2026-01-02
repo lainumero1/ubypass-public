@@ -1,0 +1,238 @@
+#topbar {
+    background-color: black;
+    transition: margin-left 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.warnicon {
+    width: 25px;
+    height: 25px;
+    margin-right: 3px;
+}
+
+#refresh-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: width 0.5s;
+    padding-top: 5.5rem;
+}
+
+.side-button {
+    border: none;
+    background-color: inherit;
+    font-size: 30px;
+    cursor: pointer;
+    display: inline-block;
+    width: 10%;
+}
+
+.topic {
+    width: 65%;
+    display: flex;
+}
+
+#topic a, .side-button, #weather-container {
+    color: #818181;
+    text-decoration: none;
+}
+
+#weather-container {
+    padding-bottom: 1rem;
+}
+
+#topic a {
+    font-size: 25px;
+}
+
+.sidebar a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: width 0.5s;
+    white-space: pre;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    margin-top: 50px;
+    width: 100%;
+    min-height: -webkit-fill-available;
+    background-color: transparent;
+}
+
+.row {
+    margin: 0px;
+}
+
+#topic {
+    text-align: center;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+#last-refresh {
+    color: gray;
+    margin: 0.5rem 0 0 0.5rem;
+}
+
+.side-button {
+    border: none;
+    background-color: inherit;
+    font-size: 30px;
+    cursor: pointer;
+    display: inline-block;
+    width: 5%;
+}
+
+#topic, .side-button {
+    color: #818181;
+    text-decoration: none;
+}
+
+#topic {
+    font-size: 25px;
+}
+
+#main {
+    display: block;
+}
+
+.row {
+    margin: 0px;
+}
+
+@media (max-width: 575px) {
+    #topbar {
+        background-color: black;
+        transition: margin-top 0.5s;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        height: 5.5rem;
+    }
+    #main {
+        transition: margin-top 0.5s;
+        margin-top: 6rem;
+        width: 100%;
+        min-height: -webkit-fill-available;
+        background-color: transparent;
+        padding: 0 15px;
+    }
+    .sidebar {
+        height: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        background-color: #111;
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+    .sidebar a{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: height 0.5s;
+    }
+
+    #topic {
+        text-align: center;
+        margin-top: 2vh;
+        margin-bottom: 0.2rem;
+    }
+    .dark-mode {
+        padding-top: 2vh;
+    }
+    .topic {
+        width: 85%;
+        margin-left: 0.5rem;
+    }
+    #home-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .refresh-icon {
+        padding-top: 1vh;    
+    }
+}
+
+
+@media (min-width: 576px) {
+    #topbar {
+        background-color: black;
+        transition: margin-left 0.5s;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        height: 5rem;
+    }
+    #main {
+        transition: margin-left 0.5s;
+        margin-top: 6rem;
+        width: 100%;
+        min-height: -webkit-fill-available;
+        background-color: transparent;
+        padding: 0 25px;
+    }
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: width 0.5s;
+        padding-top: 60px;
+    }
+    .sidebar a{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: width 0.5s;
+    }
+
+    #topic {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .topic {
+        width: 60%;
+    }
+    #home-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .refresh-icon {
+        padding-top: 2vh;    
+    }
+}
+
+.sidebar>a:last-child {
+    display: none;
+}

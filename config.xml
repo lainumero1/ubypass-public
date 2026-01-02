@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget 
+        id="com.comp3330.ubypass"   
+        version="1.0.0" 
+        xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>UBypass</name>
+    <description>UBypass</description>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <icon src="res/icon.png" />
+    <preference name="SplashScreenBackgroundColor" value="#565656" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash.png" />
+</widget>

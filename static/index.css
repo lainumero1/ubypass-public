@@ -1,0 +1,48 @@
+.bus-departure {
+    display: flex;
+    flex-direction: column;
+}
+
+.bus-departure, .mtr-departure {
+    margin-bottom: 1rem;
+    border-radius: 20px;
+}
+
+.stop-name {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.stop {
+    padding: 10px;
+}
+
+.eta {
+    float: right;
+}
+
+.departure {
+    border-top: #333 solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.departure>.dest {
+    width: 12rem;
+}
+
+.departure>span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 3rem;
+}
+
+#filter-container {
+    padding-bottom: 1rem;    
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#filter-container>input {
+    max-width: 40%;
+}

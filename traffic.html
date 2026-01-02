@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href='static/bootstrap.css'>
+        <link rel="stylesheet" href='static/base.css'>
+        <script type="module" src="static/base.js"></script>
+        <script type="module" src="static/theme_module.js"></script>
+        <link rel="stylesheet" href='static/switch.css'>
+        <link rel="stylesheet" type="text/css" href='static/traffic.css'>
+        <script type="module" src="static/traffic.js"></script>
+        <title>Nearby Traffic</title>
+    </head>
+    <body>
+        <div class="row" id="topbar" style="margin-left: 0px">
+            <div  class="side-button">
+                <button id="side-button" class="side-button">≡</button>
+            </div>
+            <div class="topic">
+                <div class="home-icon"><a href="./index.html"><img src="static/homeIcon.png" id="home-icon"></a></div>
+                <div class="refresh-icon"><a href="javascript:location.reload();"><img src="static/refresh1.png" id="refresh-icon"></a></div>
+                <p id="last-refresh"></p>
+            </div>
+            <div id="weather-container">
+            </div>
+        </div>
+        <div id="sidebar" class="sidebar">
+            <a href="./login.html">Shuttle Info</a>
+            <a href="./traffic.html">Nearby Traffic</a>
+            <a href="./settings.html">Settings</a>
+            <a href="./octopus.html">Check Octopus Balance</a>
+        </div>
+        
+        <div id="main" style="display: block">
+            <div id="map" style="position: initial;"></div>
+            <br>
+            <div id="traffic-news-container">
+            </div>
+
+            <script>
+                (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+                    key: "AIzaSyDNwn7z1LnZcspxhyl6JxpWYEEnbdVwHp4",
+                    v: "weekly",
+                    // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+                    // Add other bootstrap parameters as needed, using camel case.
+                });
+            </script>
+        </div>
+    </body>
+</html>

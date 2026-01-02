@@ -1,0 +1,33 @@
+{
+  "name": "com.comp3330.ubypass",
+  "displayName": "UBypass",
+  "version": "1.0.0",
+  "description": "An app for leaving HKU",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^14.0.1",
+    "cordova-browser": "^7.0.0",
+    "cordova-plugin-splashscreen": "^6.0.1"
+  },
+  "cordova": {
+    "platforms": [
+      "android",
+      "browser"
+    ],
+    "plugins": {
+      "cordova-plugin-splashscreen": {},
+      "community-cordova-plugin-nfc": {}
+    }
+  },
+  "dependencies": {
+    "community-cordova-plugin-nfc": "1.4.0"
+  }
+}

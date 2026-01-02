@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href='../static/bootstrap.css'>
+    <link rel="stylesheet" href='../static/base.css'>
+    <script type="module" src="../static/base.js"></script>
+    <script type="module" src="../static/theme_module.js"></script>
+    <link rel="stylesheet" href='../static/switch.css'>
+    {% block head %}
+    {% endblock %}
+</head>
+
+{% load static %}
+    <body>
+        <div class="row" id="topbar" style="margin-left: 0px">
+            <div  class="side-button">
+                <button id="side-button" class="side-button">≡</button>
+            </div>
+            <div class="topic">
+                <div class="home-icon"><a href="./index.html"><img src="../static/homeIcon.png" id="home-icon"></a></div>
+                <div class="refresh-icon"><a href="#" onclick="window.location.href"><img src="../static/refresh1.png" id="refresh-icon"></a></div>
+            </div>
+            <div id="weather-container">
+                {% for msg in WARN_MSG|slice:':-1' %}
+                    <img class="warnicon" src="../static/warnicon/{{ msg }}.gif">
+                {% endfor %}
+                <span>Current Temperature: {{ TEMPERATURE }}</span>
+            </div>
+            <!-- <input type="text" placeholder="Search" id="search-button" class="col-sm"> -->
+        </div>
+        <div id="sidebar" class="sidebar">
+            <a href="./shuttleinfo.html">Shuttle Info</a>
+            <a href="./traffic.html">Nearby Traffic</a>
+            <a href="./settings.html">Settings</a>
+            <a href="./octopus.html">Check Octopus Balance</a>
+        </div>
+        
+        <div id="main" style="display: block">
+            {% block var %}
+            {% endblock %}
+        </div>
+    
+    </body>
+</html>
