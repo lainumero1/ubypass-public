@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             else if (scheme === 'light') {
                 for (const bus of busContainer) {
-                    bus.style.backgroundColor = '#bbb'
+                    bus.style.backgroundColor = 'lightgrey'
                 }
             }
         }
@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             else if (scheme === 'light') {
                 for (const mtr of mtrContainer) {
-                    mtr.style.backgroundColor = '#bbb'
+                    mtr.style.backgroundColor = 'lightgrey'
                 }
             }
         }
